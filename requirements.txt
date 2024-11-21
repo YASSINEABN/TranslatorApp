@@ -2,4 +2,3 @@ streamlit
 python-dotenv
 azure-cognitiveservices-speech
 playsound==1.2.2
-pyaudio
