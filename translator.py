@@ -16,8 +16,12 @@ def initialize_azure():
     global speech_config
     global translation_config
 
-    ai_key = os.getenv('SPEECH_KEY')
-    ai_region = os.getenv('SPEECH_REGION')
+
+
+# Use Streamlit secrets if available, otherwise fallback to .env
+ai_key = st.secrets.get("SPEECH_KEY", os.getenv("SPEECH_KEY"))
+ai_region = st.secrets.get("SPEECH_REGION", os.getenv("SPEECH_REGION"))
+
 
     # Configure translation
     translation_config = speech_sdk.translation.SpeechTranslationConfig(ai_key, ai_region)
