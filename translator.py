@@ -19,8 +19,8 @@ def initialize_azure():
 
 
 # Use Streamlit secrets if available, otherwise fallback to .env
-ai_key = st.secrets.get("SPEECH_KEY", os.getenv("SPEECH_KEY"))
-ai_region = st.secrets.get("SPEECH_REGION", os.getenv("SPEECH_REGION"))
+    ai_key = st.secrets.get("SPEECH_KEY", os.getenv("SPEECH_KEY"))
+    ai_region = st.secrets.get("SPEECH_REGION", os.getenv("SPEECH_REGION"))
 
 
     # Configure translation
